@@ -1,0 +1,53 @@
+<div class="calculator-container">
+  <h2>Student Marks Calculator</h2>
+
+  <div *ngIf="errorMessage" class="error-banner">
+    {{ errorMessage }}
+  </div>
+
+  <div class="form-group" *ngFor="let subject of subjects; let i = index; trackBy: trackSubject">
+    <div class="subject-header">
+      <label [attr.for]="'sub' + subject.id">Subject {{ i + 1 }} Marks (0-100):</label>
+      <button
+        type="button"
+        class="btn-remove"
+        *ngIf="subjects.length > 1"
+        (click)="removeSubject(subject.id)">
+        Remove
+      </button>
+    </div>
+    <input
+      type="number"
+      [id]="'sub' + subject.id"
+      [name]="'subject' + subject.id"
+      [(ngModel)]="subject.marks"
+      min="0"
+      max="100"
+      step="1"
+      placeholder="Enter marks">
+  </div>
+
+  <button type="button" class="btn-add" (click)="addSubject()">Add Subject</button>
+
+  <div class="button-group">
+    <button type="button" class="btn-calculate" (click)="calculateResult()">Calculate Result</button>
+    <button type="button" class="btn-reset" (click)="resetCalculator()">Reset</button>
+  </div>
+
+  <div *ngIf="totalMarks !== null" class="results-card">
+    <h3>Result Summary</h3>
+    <ul>
+      <li><strong>Total Marks:</strong> {{ totalMarks }} / {{ maximumMarks }}</li>
+      <li><strong>Percentage:</strong> {{ percentage }}%</li>
+      <li>
+        <strong>Status:</strong>
+        <span [ngClass]="{'pass': resultStatus === 'Pass', 'fail': resultStatus === 'Fail'}">
+          {{ resultStatus }}
+        </span>
+      </li>
+      <li><strong>Grade:</strong> {{ grade }}</li>
+      <li><strong>Highest Mark:</strong> {{ highestMark }}</li>
+      <li><strong>Lowest Mark:</strong> {{ lowestMark }}</li>
+    </ul>
+  </div>
+</div>

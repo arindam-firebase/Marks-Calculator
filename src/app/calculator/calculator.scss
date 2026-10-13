@@ -1,0 +1,153 @@
+.calculator-container {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .error-banner {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    border: 1px solid #f5c6cb;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .subject-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .btn-remove {
+    flex: 0 0 auto;
+    padding: 4px 10px;
+    font-size: 13px;
+    background: transparent;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+  }
+
+  .btn-remove:hover {
+    background: #dc3545;
+    color: white;
+  }
+
+  .btn-add {
+    width: 100%;
+    margin-top: 4px;
+    background: #e7f1ff;
+    color: #0d6efd;
+    border: 1px dashed #0d6efd;
+  }
+
+  .btn-add:hover {
+    background: #d0e4ff;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .btn-calculate {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-calculate:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-reset {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .btn-reset:hover {
+    background-color: #5a6268;
+  }
+  
+  .results-card {
+    margin-top: 24px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+  }
+  
+  .results-card h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 8px;
+  }
+  
+  .results-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .results-card li {
+    padding: 6px 0;
+    font-size: 15px;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .pass {
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .fail {
+    color: #dc3545;
+    font-weight: bold;
+  }
